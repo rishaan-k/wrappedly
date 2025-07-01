@@ -1,5 +1,5 @@
 .table {
-    background-color: #000000;
+    background-color: #000000 !important;
     background-size: cover;
     width: 100vw;
     height: 100%;
@@ -10,6 +10,72 @@
     justify-content: center;
     padding-top: 15px;
     flex-flow: wrap;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    min-height: 400px;
+    color: #ffffff !important;
+}
+
+/* Ensure all text in table is white */
+.table * {
+    color: #ffffff !important;
+}
+
+.table a {
+    color: #ffffff !important;
+    text-decoration: none;
+}
+
+.table a:visited {
+    color: #ffffff !important;
+}
+
+/* Animation styles for smooth data loading */
+.fade-in-container {
+    width: 100%;
+    background-color: #000000;
+    min-height: 400px;
+}
+
+.item-wrapper {
+    transition: all 0.3s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Staggered animation for items */
+.item-wrapper:nth-child(1) { animation-delay: 0.05s; }
+.item-wrapper:nth-child(2) { animation-delay: 0.10s; }
+.item-wrapper:nth-child(3) { animation-delay: 0.15s; }
+.item-wrapper:nth-child(4) { animation-delay: 0.20s; }
+.item-wrapper:nth-child(5) { animation-delay: 0.25s; }
+
+/* Enhanced no data message */
+.no-data {
+    text-align: center;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    color: #666;
+    margin: 40px 0;
+    padding: 20px;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 .break{
     width: 100vw;
@@ -64,4 +130,27 @@
     justify-content: center;
     flex-direction: column;
     padding: 25px;
+    color: #ffffff !important;
+}
+
+.songs * {
+    color: #ffffff !important;
+}
+
+.songs a {
+    color: #ffffff !important;
+    text-decoration: none;
+}
+
+.songs a:visited {
+    color: #ffffff !important;
+}
+
+/* Force white text for all table content elements */
+.table p, .table span, .table div, .table li, .table h1, .table h2, .table h3, .table h4, .table h5, .table h6 {
+    color: #ffffff !important;
+}
+
+.songs p, .songs span, .songs div, .songs li, .songs h1, .songs h2, .songs h3, .songs h4, .songs h5, .songs h6 {
+    color: #ffffff !important;
 }

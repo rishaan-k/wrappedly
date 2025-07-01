@@ -1,42 +1,60 @@
-.Home{
+/* Reset for no scroll */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.Landing{
     background-color: #000000;
     background-image: url(images/home.png);
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
     margin: 0;
     padding: 0;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
   }
-  .App {
+  .LandingApp {
     text-align: center;
     height: 100vh;
-    width: 100vw;
-    background-image: linear-gradient(to right,rgb(0, 0, 0) 0%,  rgb(0, 0, 0, 0.9) 40%, rgba(255,0,0,0));
+    width: 100%;
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0) 0%, rgb(0, 0, 0, 0.9) 40%, rgba(255,0,0,0));
+    overflow: hidden;
   }
   
   .titleArea{
-    text-align: left;
-    min-height: 100vh;
-    width: 100vw;
+    text-align: center;
+    height: 100vh;
+    width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: left;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 12vh;
+    box-sizing: border-box;
   }
   .titleBox{
     cursor: default;
     padding: 10pt;
-    padding-left: 25pt;
     display: flex;
-    text-align: left;
-    justify-content: left;
+    text-align: center;
+    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
+
+
   .title{
-    width: 100%;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 900;
     font-size: calc(10px + 10vmin);
     color: #65d46e;
     margin: 0;
     padding: 0;
+    line-height: 1;
     transition: 0.2s;
   }
   .title:hover{
@@ -45,21 +63,105 @@
 
   .subtitle{
     width: 100%;
-    font-weight: 700;
-    font-size: calc(10px + 4vmin);
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    font-size: calc(8px + 2.5vmin);
+    font-style: italic;
     color: #479454;
     margin: 0;
     padding: 0;
+    margin-top: 15pt;
+    text-align: center;
   }
   .subtitle:hover{
     color: #65d46e;
     transition: 100ms ease-in-out;
   }
+
+  .tagline{
+    width: 100%;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: calc(6px + 2vmin);
+    color: #cccccc;
+    margin: 0;
+    padding: 0;
+    margin-top: 52pt;
+    text-align: center;
+    opacity: 0.9;
+  }
+  .tagline:hover{
+    color: #ffffff;
+    transition: 100ms ease-in-out;
+  }
   
   .button{
-    margin-top: 25pt;
+    margin-top: 20pt;
+  }
+
+  /* Desktop positioning adjustment */
+  @media (min-width: 769px) {
+    .titleArea {
+      padding-top: 10vh;
+    }
+  }
+
+  /* Mobile-specific adjustments */
+  @media (max-width: 768px) {
+    .LandingApp {
+      background-image: linear-gradient(to bottom, rgb(0, 0, 0) 0%, rgb(0, 0, 0, 0.9) 50%, rgba(255,0,0,0));
+    }
+    
+    .titleBox {
+      padding-left: 10pt;
+      padding-right: 10pt;
+    }
+    
+    .title {
+      font-size: 80px;
+    }
+    
+    .subtitle {
+      font-size: 36px;
+    }
+    
+    .tagline {
+      font-size: 28px;
+    }
+    
+    .buttonText {
+      font-size: 30px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .titleArea {
+      padding-top: 14vh;
+    }
+    
+    .titleBox {
+      padding-left: 5pt;
+      padding-right: 5pt;
+    }
+    
+    .title {
+      font-size: 72px;
+    }
+    
+    .subtitle {
+      font-size: 32px;
+    }
+    
+    .tagline {
+      font-size: 24px;
+    }
+    
+    .buttonText {
+      font-size: 26px;
+    }
   }
   .buttonText{
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 900;
     font-size: calc(10px + 2vmin);
     margin-top: 0;

@@ -1,69 +1,191 @@
-.navBar {
-    color: #ffffff;
-    background-color: #479454;
-    font-size: 36pt;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .navBarItem {
-    font-size: calc(10px + 2vmin);
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 5px;
-    font-weight: 800;
-    font-size: 24pt;
-    transition: 0.15s ease-in-out;
-  }
-  .navBarItem:hover{
-    color: #000000;
-    transition: 0.15s ease-in-out;
-  }
-  
-  .navBarItemMenu {
-    padding: 10px;
-    margin: 5px;
-    background-color: black;
-    font-weight: 400;
-    font-size: 20pt;
-    transition: 0.25s ease-in-out;
-  
-  }
-  .navBarItemMenu:hover {
-    cursor: pointer;
-    color: rgb(79, 76, 76);
-    transition: 0.15s ease-in-out;
-  }
+/* Home page specific styles */
 
-  .link{
-    text-decoration: none;
-    color: inherit;
-  }
-
-.controls{
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  width: 100%;
-  background-color: #000000;
-  padding-top: 10px;
+.Home {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #000000 !important;
+  min-height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
 }
 
-.toggleButton{
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  width: 100%;
+  background-color: #000000;
+  padding: 30px 10px;
+  margin-top: 0;
+  flex-wrap: wrap;
+}
+
+.typeControls, .timeControls {
+  display: flex;
+  justify-content: center;
+}
+
+.toggle-group {
+  display: flex;
+  gap: 12px;
+  background: rgba(26, 26, 26, 0.3);
+  border-radius: 30px;
+  padding: 8px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.toggle-button {
+  margin: 0 !important;
+}
+
+.toggleButton {
   margin: 10px;
   color: #479454;
 }
-.desktopNav {
-  display: flex;
-  gap: 20px;
+
+/* Content container with transitions */
+.content-container {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  min-height: 400px;
+  background-color: #000000;
+  width: 100%;
+  position: relative;
 }
 
-@media (max-width: 600px) {
-  .desktopNav {
-      display: none; /* Hide desktop links on small screens */
+.content-container.loading {
+  opacity: 1;
+  background-color: #000000;
+  animation: fadeIn 0.2s ease-in;
+}
+
+.content-container.loaded {
+  opacity: 1;
+  transform: translateY(0);
+  background-color: #000000;
+  animation: fadeIn 0.3s ease-in;
+}
+
+/* Skeleton loader styles */
+.skeleton-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #000000;
+  width: 100%;
+  min-height: 400px;
+}
+
+.skeleton-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 16px;
+  background-color: rgba(255, 255, 255, 0.02);
+  border-radius: 12px;
+  animation: skeletonPulse 1.5s ease-in-out infinite;
+}
+
+.skeleton-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+@keyframes skeletonPulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* Enhanced button states */
+.controls button {
+  position: relative;
+  overflow: hidden;
+}
+
+.controls button:disabled {
+  cursor: not-allowed !important;
+}
+
+.controls button .MuiCircularProgress-root {
+  animation: fadeIn 0.2s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* No data message styling */
+.no-data {
+  text-align: center;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  color: #666;
+  margin: 40px 0;
+  padding: 20px;
+}
+
+/* Responsive design for controls */
+@media (max-width: 768px) {
+  .controls {
+    flex-direction: column;
+    gap: 24px;
+    padding: 20px 16px;
+  }
+  
+  .toggle-group {
+    gap: 8px;
+    padding: 6px;
+  }
+  
+  .skeleton-container {
+    padding: 16px;
+  }
+  
+  .skeleton-item {
+    padding: 10px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .controls {
+    gap: 20px;
+    padding: 16px 12px;
+  }
+  
+  .toggle-group {
+    flex-direction: column;
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+    gap: 6px;
+    padding: 8px;
+  }
+  
+  .skeleton-container {
+    padding: 12px;
+    gap: 12px;
   }
 }

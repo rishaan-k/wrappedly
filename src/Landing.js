@@ -31,12 +31,13 @@ function Landing() {
     };
 
     return (
-        <div className='Home'>
-            <div className="App">
+        <div className='Landing'>
+            <div className="LandingApp">
                 <div className='titleArea'>
                     <div className='titleBox'>
-                        <p className="title">TrackTheSpot</p>
-                        <p className="subtitle">your personal Spotify data tracker</p>
+                        <p className="title">wrappedly</p>
+                        <p className="subtitle">your personal Spotify tracker</p>
+                        <p className="tagline">no need to wait for the end of the year :)</p>
                         <div className='button'>
                             <Button size="large" variant="contained" color="success" onClick={handleLogin}>
                                 <p className='buttonText'>JOIN</p>

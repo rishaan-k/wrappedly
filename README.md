@@ -1,6 +1,6 @@
-# TrackTheSpot
+# wrappedly
 
-TrackTheSpot is a personal Spotify data tracker that allows users to explore their top tracks and artists. The app is designed to offer insights into your listening habits, featuring a dynamic interface for discovering trends over different time periods.
+wrappedly is a personal Spotify data tracker that allows users to explore their top tracks and artists. The app is designed to offer insights into your listening habits, featuring a dynamic interface for discovering trends over different time periods.
 
 ## Features
 
