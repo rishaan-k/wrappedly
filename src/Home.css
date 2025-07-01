@@ -1,0 +1,69 @@
+.navBar {
+    color: #ffffff;
+    background-color: #479454;
+    font-size: 36pt;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .navBarItem {
+    font-size: calc(10px + 2vmin);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    font-weight: 800;
+    font-size: 24pt;
+    transition: 0.15s ease-in-out;
+  }
+  .navBarItem:hover{
+    color: #000000;
+    transition: 0.15s ease-in-out;
+  }
+  
+  .navBarItemMenu {
+    padding: 10px;
+    margin: 5px;
+    background-color: black;
+    font-weight: 400;
+    font-size: 20pt;
+    transition: 0.25s ease-in-out;
+  
+  }
+  .navBarItemMenu:hover {
+    cursor: pointer;
+    color: rgb(79, 76, 76);
+    transition: 0.15s ease-in-out;
+  }
+
+  .link{
+    text-decoration: none;
+    color: inherit;
+  }
+
+.controls{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  background-color: #000000;
+  padding-top: 10px;
+}
+
+.toggleButton{
+  margin: 10px;
+  color: #479454;
+}
+.desktopNav {
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 600px) {
+  .desktopNav {
+      display: none; /* Hide desktop links on small screens */
+  }
+}

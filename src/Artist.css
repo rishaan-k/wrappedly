@@ -1,0 +1,46 @@
+.artist{
+    background-color: #1d1d1d;
+    background-size: cover;
+    width: 95vw;
+    margin: 5px;
+    padding: 10px;
+    color: white;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+}
+.artist:hover{
+    filter: brightness(120%);
+    transition: 0.5s;
+}
+.link {
+    text-decoration: none;
+}
+.artistContainer{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-weight: 700;
+}
+
+.artistDetails{
+    padding: 25px;
+    color: blue;
+    text-align: left;
+}
+.artistName{
+    font-weight: 1000;
+    font-size: larger;
+
+}
+.artistGenres{
+    font-weight: 700;
+
+}
+.artistImage{
+    width: 100px;
+}
+.artistImageBody{
+    padding-left: 5px;
+    padding-right: 5px;
+}

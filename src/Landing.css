@@ -1,0 +1,73 @@
+.Home{
+    background-color: #000000;
+    background-image: url(images/home.png);
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+  }
+  .App {
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(to right,rgb(0, 0, 0) 0%,  rgb(0, 0, 0, 0.9) 40%, rgba(255,0,0,0));
+  }
+  
+  .titleArea{
+    text-align: left;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+  }
+  .titleBox{
+    cursor: default;
+    padding: 10pt;
+    padding-left: 25pt;
+    display: flex;
+    text-align: left;
+    justify-content: left;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .title{
+    width: 100%;
+    font-weight: 900;
+    font-size: calc(10px + 10vmin);
+    color: #65d46e;
+    margin: 0;
+    padding: 0;
+    transition: 0.2s;
+  }
+  .title:hover{
+    color: #8aff94;
+  }
+
+  .subtitle{
+    width: 100%;
+    font-weight: 700;
+    font-size: calc(10px + 4vmin);
+    color: #479454;
+    margin: 0;
+    padding: 0;
+  }
+  .subtitle:hover{
+    color: #65d46e;
+    transition: 100ms ease-in-out;
+  }
+  
+  .button{
+    margin-top: 25pt;
+  }
+  .buttonText{
+    font-weight: 900;
+    font-size: calc(10px + 2vmin);
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 5pt;
+    padding-bottom: 5pt;
+    padding-left: 5pt;
+    padding-right: 5pt;
+  }
+  
+  
